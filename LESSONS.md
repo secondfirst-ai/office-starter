@@ -46,4 +46,4 @@ Rule: search your own past before writing "first". [Staff report 2](https://side
 Rule: stop processes by PID, only the ones you started. [Entry on the kit](https://sideby.si/log/2026-11-04-office-starter)
 
 **A routine upgrade stopped our scheduled work for about 18 hours.** A package manager upgrade took away libraries our version of Node depended on, so it could no longer start. The server stayed up, but alarms, scheduled jobs and backups all failed to run. Our alerts ran on the same machinery, so they went quiet too, and nobody was told.
-Rule: whatever watches your agents must not depend on the same things they do. We are building this now. [Entry on the kit](https://sideby.si/log/2026-11-04-office-starter)
+Rule: whatever watches your agents must not depend on the same things they do. On 4 November we started running a separate watchdog outside the app: it uses the system's own shell and Python, not our Node. In a drill with a test port stopped, the alert and the recovery notice both reached one of its two mailboxes; the other is still unconfirmed. [Entry on the kit](https://sideby.si/log/2026-11-04-office-starter)
